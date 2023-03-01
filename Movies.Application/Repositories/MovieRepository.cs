@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Movies.Application.Repositories
 {
-    internal class MovieRepository : IMovieRepository
+    public class MovieRepository : IMovieRepository
     {
         private List<Movie> _movies = new();
 
