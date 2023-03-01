@@ -11,7 +11,7 @@ namespace Movies.Api.Mapping
             return new Movie
             {
                 Id = Guid.NewGuid(),
-                Name = request.Name,
+                Title = request.Name,
                 YearOfRelease = request.YearOfRelease,
                 Genres = request.Genres.ToList()
             };
@@ -22,7 +22,7 @@ namespace Movies.Api.Mapping
             return new Movie
             {
                 Id = id,
-                Name = request.Name,
+                Title = request.Name,
                 YearOfRelease = request.YearOfRelease,
                 Genres = request.Genres.ToList()
             };
@@ -33,7 +33,8 @@ namespace Movies.Api.Mapping
             return new MovieResponse
             {
                 Id = movie.Id,
-                Name = movie.Name,
+                Slug = movie.Slug,
+                Name = movie.Title,
                 YearOfRelease = movie.YearOfRelease,
                 Genres = movie.Genres
             };
