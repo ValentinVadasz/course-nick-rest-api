@@ -51,6 +51,6 @@ public class MovieService : IMovieService
 
     public Task<bool> DeleteByIdAsync(Guid id, CancellationToken token = default)
     {
-        return _movieRepository.DeleteByIdAsync(id, token);
+        return _movieRepository.DeleteByIdAsync(id, token)  ;
     }
 }
